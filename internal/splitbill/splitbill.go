@@ -287,7 +287,7 @@ func pickMaxPair(bal map[string]int64) (creditor, debtor string) {
 		} else if b < 0 {
 			abs := -b
 			curAbs := -bal[debtor] // debtor=="" 时为 0
-			if debtor == "" || abs > curAbs || (abs == curAbs && name > debtor) {
+			if debtor == "" || abs > curAbs || (abs == curAbs && name < debtor) {
 				debtor = name
 			}
 		}
